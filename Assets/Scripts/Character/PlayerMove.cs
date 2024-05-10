@@ -1,19 +1,35 @@
 using UnityEngine;
-[RequireComponent (typeof(CharacterController))]
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField] private float Movespeed = 5f;
-    [SerializeField] private FixedJoystick joystick;
+    [SerializeField] private Joystick joystick;
+    [SerializeField] private Camera cam;
 
-    private CharacterController _controller;
-    void Start()
+    [SerializeField] private float speed = 6f;
+
+    private Rigidbody _rb;
+    
+    private Vector3 _move;
+    private void Awake()
     {
-        _controller = GetComponent<CharacterController>();
+        _rb = GetComponent<Rigidbody>();
     }
-
-    private void Update()
+    void Update()
     {
-        Vector3 Move = transform.right * joystick.Horizontal + transform.forward * joystick.Vertical;
-        _controller.Move(Move * Movespeed * Time.deltaTime);
+        float x = joystick.Horizontal;
+        float z = joystick.Vertical;
+
+        Vector3 move = new Vector3(x, 0f, z).normalized;
+
+        Vector3 forward = Vector3.ProjectOnPlane(cam.transform.forward, Vector3.up).normalized;
+        _move = Quaternion.LookRotation(forward) * move;
+    }
+    private void FixedUpdate()
+    {
+        Move();
+    }
+    private void Move()
+    {
+        _rb.velocity = _move * speed;
     }
 }

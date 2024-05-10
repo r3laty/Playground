@@ -1,36 +1,27 @@
 using UnityEngine;
-[RequireComponent(typeof(CharacterController))]
+
 public class PlayerJump : MonoBehaviour
 {
     [SerializeField] private float jumpForce = 5;
-    [SerializeField] private float gravity = -10;
 
-    private CharacterController _controller;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundDistance = 0.4f;
+
+    private Rigidbody _rb; 
     private Vector3 _velocity;
 
     private bool _isPressed;
     private bool _isGrounded;
     void Start()
     {
-        _controller = GetComponent<CharacterController>();
+        _rb = GetComponent<Rigidbody>();
     }
-    private void Update()
+    private void Jump()
     {
-        if (_isPressed)
-        {
-            _velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
-            _isPressed = false;
-        }
-
-        _velocity.y += gravity * Time.deltaTime;
-        _controller.Move(_velocity * Time.deltaTime);
+        _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
-    public void Jump()
+    public void OnClick()
     {
-        _isPressed = true;
-
-        if (_isGrounded)
-        {
-        }
+        Jump();
     }
 }
