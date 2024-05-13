@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ItemPicker : MonoBehaviour
+public class ItemPicker : MonoBehaviour, IRaycastable
 {
     [SerializeField] private Transform handTransform;
 
@@ -9,32 +9,38 @@ public class ItemPicker : MonoBehaviour
 
     private Transform _hitTransform = null;
     private Rigidbody _hitRb = null;
+
     private void Update()
     {
-        if (ButtonHeldDetector.IsButtonHold)
+        if (ButtonHoldDetector.IsButtonHold)
         {
-            RaycastHit hit;
-            var raycast = Physics.Raycast(transform.position, transform.forward, out hit, raycastDistance, itemLayer);
-
-            if (raycast)
-            {
-                hit.collider.TryGetComponent<Transform>(out _hitTransform);
-                hit.collider.TryGetComponent<Rigidbody>(out _hitRb);
-
-                _hitRb.velocity = Vector3.zero;
-                Debug.Log("Item chosen " + hit.collider.name);
-            }
-            else
-            {
-                Debug.Log("Item dont chosen");
-            }
-            if (_hitTransform != null)
-            {
-                _hitTransform.position = handTransform.position;
-            }
+            Raycatsing();
         }
         _hitRb = null;
         _hitTransform = null;
+    }
+    public void Raycatsing()
+    {
+        RaycastHit hit;
+        var raycast = Physics.Raycast(transform.position, transform.forward, out hit, raycastDistance, itemLayer);
+
+        if (raycast)
+        {
+            hit.collider.TryGetComponent<Transform>(out _hitTransform);
+            hit.collider.TryGetComponent<Rigidbody>(out _hitRb);
+
+            _hitRb.velocity = Vector3.zero;
+            Debug.Log("Item chosen " + hit.collider.name);
+        }
+        else
+        {
+            Debug.Log("Item dont chosen");
+        }
+        if (_hitTransform != null)
+        {
+            _hitTransform.position = handTransform.position;
+        }
+
     }
 }
 

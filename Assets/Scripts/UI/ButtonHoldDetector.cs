@@ -1,10 +1,9 @@
 using System;
 using System.Collections;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ButtonHeldDetector : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class ButtonHoldDetector : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public static bool IsButtonHold;
     public static event Action Holded;
