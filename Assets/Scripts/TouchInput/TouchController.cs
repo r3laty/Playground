@@ -7,6 +7,6 @@ public class TouchController : MonoBehaviour
 
     void Update()
     {
-        cameraLook.LockAxis = fixedTouchField.TouchDist;
+        cameraLook.LockAxis = fixedTouchField.TouchDistance;
     }
 }

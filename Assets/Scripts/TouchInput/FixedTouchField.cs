@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 public class FixedTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [HideInInspector]
-    public Vector2 TouchDist;
+    public Vector2 TouchDistance;
 
     private Vector2 PointerOld;
 
@@ -17,18 +17,18 @@ public class FixedTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         {
             if (_pointerId >= 0 && _pointerId < Input.touches.Length)
             {
-                TouchDist = Input.touches[_pointerId].position - PointerOld;
+                TouchDistance = Input.touches[_pointerId].position - PointerOld;
                 PointerOld = Input.touches[_pointerId].position;
             }
             else
             {
-                TouchDist = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - PointerOld;
+                TouchDistance = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - PointerOld;
                 PointerOld = Input.mousePosition;
             }
         }
         else
         {
-            TouchDist = new Vector2();
+            TouchDistance = new Vector2();
         }
     }
 
