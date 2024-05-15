@@ -4,13 +4,14 @@ public class CameraLook : MonoBehaviour
 {
     [HideInInspector]public Vector2 LockAxis;
     
+    public float sensivity = 40f;
+    
     [SerializeField] private Transform playerBody;
-    [SerializeField] private float sensivity = 40f;
     
     private float _xMove;
     private float _yMove;
     private float _xRotation;
-    void Update()
+    private void Update()
     {
         _xMove = LockAxis.x * sensivity * Time.deltaTime;
         _yMove = LockAxis.y * sensivity * Time.deltaTime;

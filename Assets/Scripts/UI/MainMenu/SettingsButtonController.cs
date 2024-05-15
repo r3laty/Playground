@@ -1,8 +1,13 @@
+using System;
 using TMPro;
 using UnityEngine;
 
 public class SettingsButtonController : MonoBehaviour
 {
+    public static Action<int> SensValueChanged;
+    public static Action<int> MusValueChanged;
+    public static Action<int> SoundsValueChanged;
+
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject mainMenu;
     [Space]
@@ -10,14 +15,14 @@ public class SettingsButtonController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI musicCount;
     [SerializeField] private TextMeshProUGUI soundsCount;
 
-    private int sensivity;
-    private int music;
-    private int sounds;
+    public int Sensivity { get; private set; }
+    public int Music { get; private set; }
+    public int Sounds { get; private set; }
     private void Start()
     {
-        sensivity = 25;
-        music = 25;
-        sounds = 25;
+        Sensivity = 25;
+        Music = 25;
+        Sounds = 25;
     }
     public void OnSettinsButtonClick()
     {
@@ -34,18 +39,24 @@ public class SettingsButtonController : MonoBehaviour
         switch (settingType)
         {
             case 1:
-                sensivity++;
-                sensivityCount.text = sensivity.ToString() + "%";
+                Sensivity++;
+                sensivityCount.text = Sensivity.ToString() + "%";
+
+                SensValueChanged?.Invoke(Sensivity);
                 break;
 
             case 2:
-                music++;
-                musicCount.text = music.ToString() + "%";
+                Music++;
+                musicCount.text = Music.ToString() + "%";
+
+                MusValueChanged?.Invoke(Music);
                 break;
 
             case 3:
-                sounds++;
-                soundsCount.text = sounds.ToString() + "%";
+                Sounds++;
+                soundsCount.text = Sounds.ToString() + "%";
+                
+                SoundsValueChanged?.Invoke(Sounds);
                 break;
         }
     }
@@ -54,18 +65,24 @@ public class SettingsButtonController : MonoBehaviour
         switch (settingType)
         {
             case 1:
-                sensivity--;
-                sensivityCount.text = sensivity.ToString() + "%";
+                Sensivity--;
+                sensivityCount.text = Sensivity.ToString() + "%";
+
+                SensValueChanged?.Invoke(Sensivity);
                 break;
 
             case 2:
-                music--;
-                musicCount.text = music.ToString() + "%";
+                Music--;
+                musicCount.text = Music.ToString() + "%";
+
+                MusValueChanged?.Invoke(Music);
                 break;
 
             case 3:
-                sounds--;
-                soundsCount.text = sounds.ToString() + "%";
+                Sounds--;
+                soundsCount.text = Sounds.ToString() + "%";
+
+                SoundsValueChanged?.Invoke(Sounds);
                 break;
         }
     }
