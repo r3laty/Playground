@@ -2,19 +2,17 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
-
-    [SerializeField] private int currentItemIndex;
-
     [SerializeField] private GameObject[] itemsToSpawn;
 
+    private int _currentItemIndex;
     public void SetIndex(int index)
     {
-        currentItemIndex = index;
+        _currentItemIndex = index;
         SpawnOnScene();
     }
     private void SpawnOnScene()
     {
-        var GO = Instantiate(itemsToSpawn[currentItemIndex], transform.position, Quaternion.identity);
-        currentItemIndex = 0;
+        var GO = Instantiate(itemsToSpawn[_currentItemIndex], transform.position, Quaternion.identity);
+        _currentItemIndex = 0;
     }
 }

@@ -6,10 +6,11 @@ public class ItemPicker : MonoBehaviour, IRaycastable
 
     [SerializeField] private float raycastDistance;
     [SerializeField] private LayerMask itemLayer;
+    [Space]
+    [SerializeField] private Camera mainCam;
 
     private Transform _hitTransform = null;
     private Rigidbody _hitRb = null;
-
     private void Update()
     {
         if (ButtonHoldDetector.IsButtonHold)
@@ -21,6 +22,7 @@ public class ItemPicker : MonoBehaviour, IRaycastable
     }
     public void Raycatsing()
     {
+
         RaycastHit hit;
         var raycast = Physics.Raycast(transform.position, transform.forward, out hit, raycastDistance, itemLayer);
 
@@ -29,6 +31,7 @@ public class ItemPicker : MonoBehaviour, IRaycastable
             hit.collider.TryGetComponent<Transform>(out _hitTransform);
             hit.collider.TryGetComponent<Rigidbody>(out _hitRb);
 
+            _hitTransform.position = handTransform.position;
             _hitRb.velocity = Vector3.zero;
             Debug.Log("Item chosen " + hit.collider.name);
         }
@@ -36,11 +39,6 @@ public class ItemPicker : MonoBehaviour, IRaycastable
         {
             Debug.Log("Item dont chosen");
         }
-        if (_hitTransform != null)
-        {
-            _hitTransform.position = handTransform.position;
-        }
-
     }
 }
 
