@@ -17,8 +17,12 @@ public class ItemPicker : MonoBehaviour, IRaycastable
         {
             Raycatsing();
         }
-        _hitRb = null;
-        _hitTransform = null;
+        else if (!ButtonHoldDetector.IsButtonHold)
+        {
+            _hitRb.useGravity = true;
+            _hitRb = null;
+            _hitTransform = null;
+        }
     }
     public void Raycatsing()
     {
@@ -33,6 +37,7 @@ public class ItemPicker : MonoBehaviour, IRaycastable
 
             _hitTransform.position = handTransform.position;
             _hitRb.velocity = Vector3.zero;
+            _hitRb.useGravity = false;
             Debug.Log("Item chosen " + hit.collider.name);
         }
         else

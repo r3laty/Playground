@@ -16,10 +16,14 @@ public class CameraLook : MonoBehaviour
     private void Start()
     {
         sensivity = pause.Sensivity;
+        if (pause.Sensivity <= 0)
+        {
+            sensivity = 20;
+        }
     }
     private void Update()
     {
-        sensivity = pause.Sensivity;
+        //sensivity = pause.Sensivity;
 
         _xMove = LockAxis.x * sensivity * Time.deltaTime;
         _yMove = LockAxis.y * sensivity * Time.deltaTime;
