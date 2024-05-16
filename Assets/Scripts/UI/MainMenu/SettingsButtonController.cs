@@ -8,8 +8,8 @@ public class SettingsButtonController : MonoBehaviour
     public static Action<int> MusValueChanged;
     public static Action<int> SoundsValueChanged;
 
-    [SerializeField] private GameObject settingsMenu;
-    [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject firstMenu;
+    [SerializeField] private GameObject secondMenu;
     [Space]
     [SerializeField] private TextMeshProUGUI sensivityCount;
     [SerializeField] private TextMeshProUGUI musicCount;
@@ -26,13 +26,13 @@ public class SettingsButtonController : MonoBehaviour
     }
     public void OnSettinsButtonClick()
     {
-        mainMenu.SetActive(false);
-        settingsMenu.SetActive(true);
+        firstMenu.SetActive(false);
+        secondMenu.SetActive(true);
     }
     public void OnExitSettingsButtonClick()
     {
-        mainMenu.SetActive(true);
-        settingsMenu.SetActive(false);
+        firstMenu.SetActive(true);
+        secondMenu.SetActive(false);
     }
     public void OnMoreButtonClick(int settingType)
     {

@@ -27,11 +27,17 @@ public class PauseController : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
-    public void OnResetClick(int sceneIndex)
+    public void OnRestartClick(int sceneIndex)
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(sceneIndex);
     }
+    public void LeaveToMenuOnClick(int sceneIndex)
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(sceneIndex);
+    }
+
     //public void OnMoreButtonClick(int settingType)
     //{
     //    switch (settingType)

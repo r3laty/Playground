@@ -39,8 +39,8 @@ public class DontDestroyOnLoadVars : MonoBehaviour
     private void OnDisable()
     {
         SettingsButtonController.SensValueChanged -= SensivitySettings;
-        SettingsButtonController.MusValueChanged += MusicSettings;
-        SettingsButtonController.SoundsValueChanged += SoundsSettings;
+        SettingsButtonController.MusValueChanged -= MusicSettings;
+        SettingsButtonController.SoundsValueChanged -= SoundsSettings;
     }
 }
 
