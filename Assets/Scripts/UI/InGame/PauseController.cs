@@ -1,19 +1,31 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseController : MonoBehaviour
 {
+    [HideInInspector] public int Sensivity;
+    [HideInInspector] public int Music;
+    [HideInInspector] public int Sounds;
+
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject inGameMenu;
+    [Space]
+    [SerializeField] private TextMeshProUGUI sensivityCount;
+    [SerializeField] private TextMeshProUGUI musicCount;
+    [SerializeField] private TextMeshProUGUI soundsCount;
 
-    private int _sensivity;
-    private int _music;
-    private int _sounds;
+
+    private char _persent = '%';
     private void Start()
     {
-        _sensivity = DontDestroyOnLoadVars.Instance.Sensivity;
-        _music = DontDestroyOnLoadVars.Instance.Music;
-        _sounds = DontDestroyOnLoadVars.Instance.Sounds;
+        Sensivity = DontDestroyOnLoadVars.Instance.Sensivity;
+        Music = DontDestroyOnLoadVars.Instance.Music;
+        Sounds = DontDestroyOnLoadVars.Instance.Sounds;
+
+        sensivityCount.text = Sensivity.ToString() + _persent;
+        musicCount.text = Music.ToString() + _persent;
+        soundsCount.text = Sounds.ToString() + _persent;
     }
     public void OnPauseClick()
     {
@@ -38,45 +50,45 @@ public class PauseController : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
-    //public void OnMoreButtonClick(int settingType)
-    //{
-    //    switch (settingType)
-    //    {
-    //        case 1:
-    //            sensivity++;
-    //            sensivityCount.text = sensivity.ToString() + "%";
-    //            break;
+    public void OnMoreButtonClick(int settingtype)
+    {
+        switch (settingtype)
+        {
+            case 1:
+                Sensivity++;
+                sensivityCount.text = Sensivity.ToString() + _persent;
+                break;
 
-    //        case 2:
-    //            music++;
-    //            musicCount.text = music.ToString() + "%";
-    //            break;
+            case 2:
+                Music++;
+                musicCount.text = Music.ToString() + _persent;
+                break;
 
-    //        case 3:
-    //            sounds++;
-    //            soundsCount.text = sounds.ToString() + "%";
-    //            break;
-    //    }
-    //}
-    //public void OnLessButtonClick(int settingType)
-    //{
-    //    switch (settingType)
-    //    {
-    //        case 1:
-    //            sensivity--;
-    //            sensivityCount.text = sensivity.ToString() + "%";
-    //            break;
+            case 3:
+                Sounds++;
+                soundsCount.text = Sounds.ToString() + _persent;
+                break;
+        }
+    }
+    public void OnLessButtonClick(int settingtype)
+    {
+        switch (settingtype)
+        {
+            case 1:
+                Sensivity--;
+                sensivityCount.text = Sensivity.ToString() + _persent;
+                break;
 
-    //        case 2:
-    //            music--;
-    //            musicCount.text = music.ToString() + "%";
-    //            break;
+            case 2:
+                Music--;
+                musicCount.text = Music.ToString() + _persent;
+                break;
 
-    //        case 3:
-    //            sounds--;
-    //            soundsCount.text = sounds.ToString() + "%";
-    //            break;
-    //    }
-    //}
+            case 3:
+                Sounds--;
+                soundsCount.text = Sounds.ToString() + _persent;
+                break;
+        }
+    }
 
 }

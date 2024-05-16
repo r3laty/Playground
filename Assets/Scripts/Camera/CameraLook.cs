@@ -4,15 +4,23 @@ public class CameraLook : MonoBehaviour
 {
     [HideInInspector]public Vector2 LockAxis;
     
-    public float sensivity = 40f;
-    
+    [SerializeField] private float sensivity = 40f;
+    [Space]
     [SerializeField] private Transform playerBody;
-    
+    [Space]
+    [SerializeField] private PauseController pause;
+
     private float _xMove;
     private float _yMove;
     private float _xRotation;
+    private void Start()
+    {
+        sensivity = pause.Sensivity;
+    }
     private void Update()
     {
+        sensivity = pause.Sensivity;
+
         _xMove = LockAxis.x * sensivity * Time.deltaTime;
         _yMove = LockAxis.y * sensivity * Time.deltaTime;
         _xRotation -= _yMove;

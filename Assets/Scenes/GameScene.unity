@@ -278,7 +278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -868.88, y: 469.63}
+  m_AnchoredPosition: {x: -868.88, y: 363.7}
   m_SizeDelta: {x: 182.25, y: 140.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &87638884
@@ -2153,8 +2153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207, y: -0.000026703}
-  m_SizeDelta: {x: 298.9918, y: 107.66}
+  m_AnchoredPosition: {x: -198.00493, y: 21.50412}
+  m_SizeDelta: {x: 298.2555, y: 65.1787}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &641809413
 MonoBehaviour:
@@ -2937,8 +2937,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 393.6109, y: -199.22281}
-  m_SizeDelta: {x: 126.9041, y: 199.3626}
+  m_AnchoredPosition: {x: 401.1268, y: -97}
+  m_SizeDelta: {x: 126.5916, y: 120.6965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &714402925
 MonoBehaviour:
@@ -2984,8 +2984,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1622799152}
-        m_TargetAssemblyTypeName: SettingsButtonController, Assembly-CSharp
+      - m_Target: {fileID: 795815466}
+        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
         m_MethodName: OnMoreButtonClick
         m_Mode: 3
         m_Arguments:
@@ -3171,8 +3171,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46f46c5a5a49f44d9f187b5a5c8dc58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sensivity: 0
+  Music: 0
+  Sounds: 0
   pauseMenu: {fileID: 1621821112}
   inGameMenu: {fileID: 1511449408}
+  sensivityCount: {fileID: 1484728885}
+  musicCount: {fileID: 822786714}
+  soundsCount: {fileID: 1268612732}
 --- !u!4 &795815467
 Transform:
   m_ObjectHideFlags: 0
@@ -3249,8 +3255,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 273.50677, y: 3.9679565}
-  m_SizeDelta: {x: 553.6697, y: 199.3631}
+  m_AnchoredPosition: {x: 288, y: 21.504}
+  m_SizeDelta: {x: 320.8496, y: 120.6969}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &822786714
 MonoBehaviour:
@@ -3272,7 +3278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 25%
+  m_text: 0%
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3385,8 +3391,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 375, y: 205}
-  m_SizeDelta: {x: 67.5103, y: 59.607}
+  m_AnchoredPosition: {x: 382.5618, y: 145.61362}
+  m_SizeDelta: {x: 67.344, y: 36.0868}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &829747396
 MonoBehaviour:
@@ -3432,8 +3438,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1622799152}
-        m_TargetAssemblyTypeName: SettingsButtonController, Assembly-CSharp
+      - m_Target: {fileID: 795815466}
+        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
         m_MethodName: OnMoreButtonClick
         m_Mode: 3
         m_Arguments:
@@ -4982,8 +4988,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -209, y: -204}
-  m_SizeDelta: {x: 326.17, y: 130.6324}
+  m_AnchoredPosition: {x: -200, y: -102}
+  m_SizeDelta: {x: 325.3667, y: 79.0864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1189557464
 MonoBehaviour:
@@ -5278,7 +5284,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 693, y: 428}
+  m_AnchoredPosition: {x: 700, y: 341}
   m_SizeDelta: {x: 109.1376, y: 109.1376}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214651932
@@ -5490,8 +5496,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 273.50677, y: -204}
-  m_SizeDelta: {x: 553.6697, y: 199.3631}
+  m_AnchoredPosition: {x: 281.32, y: -102}
+  m_SizeDelta: {x: 366.21, y: 120.6969}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1268612732
 MonoBehaviour:
@@ -5513,7 +5519,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 25%
+  m_text: 0%
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5680,8 +5686,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 153.40253, y: -199.2223}
-  m_SizeDelta: {x: 126.9041, y: 199.3626}
+  m_AnchoredPosition: {x: 161.51004, y: -99.107544}
+  m_SizeDelta: {x: 126.5916, y: 120.6965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1275854281
 MonoBehaviour:
@@ -5727,8 +5733,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1622799152}
-        m_TargetAssemblyTypeName: SettingsButtonController, Assembly-CSharp
+      - m_Target: {fileID: 795815466}
+        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
         m_MethodName: OnLessButtonClick
         m_Mode: 3
         m_Arguments:
@@ -6144,8 +6150,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -199, y: 196}
-  m_SizeDelta: {x: 355.6082, y: 128.0459}
+  m_AnchoredPosition: {x: -190.02458, y: 140.16501}
+  m_SizeDelta: {x: 354.7324, y: 77.5206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1318794016
 MonoBehaviour:
@@ -6838,7 +6844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000019073, y: -298}
+  m_AnchoredPosition: {x: -0.000019073, y: -189}
   m_SizeDelta: {x: 178.0848, y: 178.0848}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1459089610
@@ -7127,8 +7133,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 261, y: 202}
-  m_SizeDelta: {x: 676.491, y: 243.5881}
+  m_AnchoredPosition: {x: 268.8425, y: 143.79741}
+  m_SizeDelta: {x: 320.0036, y: 84.785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1484728885
 MonoBehaviour:
@@ -7150,7 +7156,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 25%
+  m_text: 0%
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7388,7 +7394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000019073, y: -417}
+  m_AnchoredPosition: {x: -0.000019073, y: -308}
   m_SizeDelta: {x: 178.0848, y: 178.0848}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1548439569
@@ -7761,7 +7767,6 @@ GameObject:
   - component: {fileID: 1622799151}
   - component: {fileID: 1622799150}
   - component: {fileID: 1622799149}
-  - component: {fileID: 1622799152}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -7819,23 +7824,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1622799152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622799148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a23603ea147aab04f9fc932b6bd95409, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstMenu: {fileID: 1511449408}
-  secondMenu: {fileID: 1621821112}
-  sensivityCount: {fileID: 1484728885}
-  musicCount: {fileID: 822786714}
-  soundsCount: {fileID: 1268612732}
 --- !u!1 &1633103948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4092167881768949963, guid: d47a8c80698c7a4498e67885de9e7746,
@@ -8948,8 +8936,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 386.4168, y: 6}
-  m_SizeDelta: {x: 40.4326, y: 53.063}
+  m_AnchoredPosition: {x: 393.95047, y: 25.136612}
+  m_SizeDelta: {x: 40.333, y: 32.125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1824488568
 MonoBehaviour:
@@ -8995,8 +8983,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1622799152}
-        m_TargetAssemblyTypeName: SettingsButtonController, Assembly-CSharp
+      - m_Target: {fileID: 795815466}
+        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
         m_MethodName: OnMoreButtonClick
         m_Mode: 3
         m_Arguments:
@@ -9195,8 +9183,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 143.41504, y: 1}
-  m_SizeDelta: {x: 44.9637, y: 57.0354}
+  m_AnchoredPosition: {x: 151.54715, y: 22.109528}
+  m_SizeDelta: {x: 44.853, y: 34.5299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880340837
 MonoBehaviour:
@@ -9242,8 +9230,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1622799152}
-        m_TargetAssemblyTypeName: SettingsButtonController, Assembly-CSharp
+      - m_Target: {fileID: 795815466}
+        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
         m_MethodName: OnLessButtonClick
         m_Mode: 3
         m_Arguments:
@@ -10230,8 +10218,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 136.82454, y: 201.99998}
-  m_SizeDelta: {x: 70.0309, y: 59.6063}
+  m_AnchoredPosition: {x: 144.9729, y: 143.79741}
+  m_SizeDelta: {x: 69.8584, y: 36.0864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2145552722
 MonoBehaviour:
@@ -10277,8 +10265,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1622799152}
-        m_TargetAssemblyTypeName: SettingsButtonController, Assembly-CSharp
+      - m_Target: {fileID: 795815466}
+        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
         m_MethodName: OnLessButtonClick
         m_Mode: 3
         m_Arguments:
@@ -10410,6 +10398,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4239577790316518127, guid: bce3265de6dbf2342a6e6452c172d1f4,
+        type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 795815466}
     - target: {fileID: 4333387253817500814, guid: bce3265de6dbf2342a6e6452c172d1f4,
         type: 3}
       propertyPath: joystick
