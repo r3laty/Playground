@@ -19,9 +19,19 @@ public class PauseController : MonoBehaviour
     private char _persent = '%';
     private void Start()
     {
-        Sensivity = DontDestroyOnLoadVars.Instance.Sensivity;
-        Music = DontDestroyOnLoadVars.Instance.Music;
-        Sounds = DontDestroyOnLoadVars.Instance.Sounds;
+        if (DontDestroyOnLoadVars.Instance != null)
+        {
+            Sensivity = DontDestroyOnLoadVars.Instance.Sensivity;
+            Music = DontDestroyOnLoadVars.Instance.Music;
+            Sounds = DontDestroyOnLoadVars.Instance.Sounds;
+        }
+        else
+        {
+            Sensivity = 20; 
+            Music = 20; 
+            Sounds = 20;
+        }
+
 
         sensivityCount.text = Sensivity.ToString() + _persent;
         musicCount.text = Music.ToString() + _persent;

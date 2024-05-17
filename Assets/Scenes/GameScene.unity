@@ -6468,8 +6468,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9148330783183157373}
-        m_TargetAssemblyTypeName: PlayerJump, Assembly-CSharp
+      - m_Target: {fileID: 9148330783183157400}
+        m_TargetAssemblyTypeName: PlayerMove, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -10360,6 +10360,11 @@ PrefabInstance:
       propertyPath: bulletLifetime
       value: 1.8
       objectReference: {fileID: 0}
+    - target: {fileID: 2066471844553335407, guid: bce3265de6dbf2342a6e6452c172d1f4,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3962946134573148949, guid: bce3265de6dbf2342a6e6452c172d1f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10420,28 +10425,22 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 700383104}
+    - target: {fileID: 4333387253817500814, guid: bce3265de6dbf2342a6e6452c172d1f4,
+        type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8672071582217623561, guid: bce3265de6dbf2342a6e6452c172d1f4,
         type: 3}
       propertyPath: fixedTouchField
       value: 
       objectReference: {fileID: 1012656632}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3606283492552152802, guid: bce3265de6dbf2342a6e6452c172d1f4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bce3265de6dbf2342a6e6452c172d1f4, type: 3}
---- !u!114 &9148330783183157373 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3606283492552152802, guid: bce3265de6dbf2342a6e6452c172d1f4,
-    type: 3}
-  m_PrefabInstance: {fileID: 2123020993473736753}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94c5bd3c5fd4af44fb2b046dbd80d081, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &9148330783183157388 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8033382522331410965, guid: bce3265de6dbf2342a6e6452c172d1f4,
@@ -10464,6 +10463,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e1c8cd32cfcbd34189a5d0d7f7325d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9148330783183157400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4333387253817500814, guid: bce3265de6dbf2342a6e6452c172d1f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2123020993473736753}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595608c08ce57864b835b00cfa77db84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

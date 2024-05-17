@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.collider.CompareTag("Enemy"))
         {
-            EnemyHealth enemyHealth = collision.collider.GetComponent<EnemyHealth>();
+            collision.collider.TryGetComponent<EnemyHealth>(out EnemyHealth enemyHealth);
             if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(damage);

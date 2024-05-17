@@ -19,7 +19,11 @@ public class ItemPicker : MonoBehaviour, IRaycastable
         }
         else if (!ButtonHoldDetector.IsButtonHold)
         {
-            _hitRb.useGravity = true;
+            if (_hitRb != null)
+            {
+                _hitRb.useGravity = true;
+            }
+
             _hitRb = null;
             _hitTransform = null;
         }
