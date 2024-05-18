@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody _rb;
     private bool _isPressed;
+    private bool _isGrounded;
     private Vector3 _move;
     private void Awake()
     {
@@ -27,8 +28,9 @@ public class PlayerMovement : MonoBehaviour
         Vector3 forward = Vector3.ProjectOnPlane(cam.transform.forward, Vector3.up);
         _move = Quaternion.LookRotation(forward) * move;
 
-        if (_isPressed)
+        if (_isPressed && _isGrounded)
         {
+            print($"is grounded {_isGrounded}");
             Jump();
             _isPressed = false;
         }
@@ -48,5 +50,20 @@ public class PlayerMovement : MonoBehaviour
     public void OnClick()
     {
         _isPressed = true;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            _isGrounded = true;
+            _isPressed = false;
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            _isGrounded = false;
+        }
     }
 }

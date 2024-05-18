@@ -11,9 +11,9 @@ public class Bullet : MonoBehaviour
             if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(damage);
+                print("Catch enemy health");
             }
         }
-        
         Destroy(gameObject);
     }
 
