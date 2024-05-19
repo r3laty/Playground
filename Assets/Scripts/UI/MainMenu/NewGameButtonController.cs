@@ -3,10 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class NewGameButtonController : MonoBehaviour
 {
-    [SerializeField] private int gameSceneId;
-
-    public void OnNewGameClick()
+    public void OnNewGameClick(int index)
     {
-        SceneManager.LoadScene(gameSceneId);
+        SceneManager.LoadScene(index);
     }
 }

@@ -3775,6 +3775,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5144483003966253567, guid: bce3265de6dbf2342a6e6452c172d1f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6299013711249705873, guid: bce3265de6dbf2342a6e6452c172d1f4,
         type: 3}
       propertyPath: fixedTouchField
