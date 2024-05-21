@@ -288,7 +288,7 @@ MonoBehaviour:
   jumpForce: 5
   joystick: {fileID: 0}
   cam: {fileID: 1960077005709428702}
-  speed: 6
+  speed: 370
 --- !u!114 &956771059541161487
 MonoBehaviour:
   m_ObjectHideFlags: 0

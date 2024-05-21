@@ -27,13 +27,6 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 forward = Vector3.ProjectOnPlane(cam.transform.forward, Vector3.up);
         _move = Quaternion.LookRotation(forward) * move;
-
-        if (_isPressed && _isGrounded)
-        {
-            print($"is grounded {_isGrounded}");
-            Jump();
-            _isPressed = false;
-        }
     }
     private void FixedUpdate()
     {
@@ -41,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Move()
     {
-        _rb.velocity = new Vector3(_move.x * speed, _move.y, _move.z * speed);
+        _rb.velocity = new Vector3(_move.x * speed * Time.fixedDeltaTime, _move.y, _move.z * speed * Time.fixedDeltaTime);
     }
     private void Jump()
     {
@@ -49,7 +42,10 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnClick()
     {
-        _isPressed = true;
+        if (_isGrounded)
+        {
+            Jump();
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {

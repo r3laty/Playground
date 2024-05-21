@@ -217,18 +217,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &106313766 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6418470856539862083, guid: da21bcb60680f584ba10fe84b97d20fd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1154299022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &443268733 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011072209702, guid: b2be9b4ffc291194c96942bd60bdc25c,
@@ -532,6 +520,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1761089788}
+    - target: {fileID: 1662125758109561020, guid: da21bcb60680f584ba10fe84b97d20fd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1974626507312915428, guid: da21bcb60680f584ba10fe84b97d20fd,
         type: 3}
       propertyPath: m_Name
@@ -1196,7 +1189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CoinCount: 0
-  coinCountText: {fileID: 106313766}
+  coinCountText: {fileID: 0}
 --- !u!4 &2050558621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013597048134, guid: 6ba935b82d3a0c84a819a0bf925b86bd,
